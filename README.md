@@ -1,45 +1,83 @@
-**Download Files and Folders from an Ubuntu Server** 
+# **Download Files and Folders from an Ubuntu Server** 
 
-**Step-1: Login and Update** 
+## **Step-1: Login and Update** 
 
 Login into your server with ssh and update your Ubuntu server with sudo apt update 
+```
+sudo apt upgrade
+```
+```
+sudo apt update
+```
 
-sudo apt upgrade 
+## **Step-2: Install necessary tools** 
 
-**Step-2: Install necessary tools** 
+Install net-tools: 
+```
+sudo apt install net-tools
+```
 
-Install net-tools:**  
+Install python3: 
+```
+sudo apt install python3 
+```
 
-sudo apt install net-tools** Install python3: 
-
-sudo apt install python3 Install zip 
-
+Install zip: 
+```
 sudo apt install zip 
+```
 
-**Step-3: Start a python3 http server** 
+## **Step-3: Start a python http server** 
 
-Start a python server on server’s root folder using python3 Python3 –m http.server <port\_number> 
+Start a python server on the server’s root folder using python3 
+```
+python3 –m http.server <port_number> 
+```
 
-**Step-4: Access the server and download files** 
+If you want to start a python server on a specific IP, you can do like this,
+```
+python3 -m http.server <port_number> --bind <server-IP>
+```
+### Firewall Settings on the Server (if required)
 
-Open any browser in your local machine(system) and access your server IP with port number **Note:** You can find your server’s IP with ifconfig command 
+Ensure that the firewall on your Ubuntu Server allows incoming traffic on the custom port you specified. 
+You may need to configure your server's firewall rules to allow traffic on that port.
 
-Now you can be able to see all the files and folders which are there in your server. 
+If you're using ufw on Ubuntu, you can add a rule to allow traffic on your custom port like this:
+```
+sudo ufw allow <custom-port>/tcp
+```
+```
+sudo ufw reload
+```
 
-You can simply download any file by pressing right click and ‘save file as’ 
+## **Step-4: Access the server and download files** 
 
-**Note:** You cannot download the whole folder.  
+Open any browser in your local machine(system) and access your server IP with the port number 
 
-If you want to download the whole folder, you need to zip the folder first 
+**Note:** You can find your server’s IP with `ifconfig` command 
 
-**Step-5: zip the folders** 
+Now you can be able to see all the files and folders which are there on your server. 
 
-Zip all the folders that you want to download using zip command For example, to compress a folder named "myfolder," you can use: zip -r myfolder.zip myfolder 
+You can simply download any file by pressing right-click and ‘save file as’ 
 
-**Step-6: Start the python server and download the zip files** 
+## **Note:** You cannot download the whole folder.  
+
+If you want to download the whole folder, you need to 'zip the folder first' 
+
+## **Step-5: zip the folders** 
+
+Zip all the folders that you want to download using `zip` command.
+
+For example, to compress a folder named "myfolder," you can use: 
+```
+zip -r myfolder.zip myfolder 
+```
+
+## **Step-6: Start the python server and download the zip files** 
 
 Start the python server using python3 
 
 You can simply download the zip files by clicking on them. 
 
-Once you download all the files and folders stop the python server with ctrl+c keyboard shortcut and exit from ssh connection with exit command 
+Once you download all the files and folders stop the python server with the ctrl+c keyboard shortcut and exit from the ssh connection with `exit` command 
