@@ -61,7 +61,7 @@ Now you can be able to see all the files and folders which are there on your ser
 
 You can simply download any file by pressing right-click and ‘save file as’ 
 
-## **Note:** You cannot download the whole folder.  
+**Note:** You cannot download the whole folder.  
 
 If you want to download the whole folder, you need to 'zip the folder first' 
 
