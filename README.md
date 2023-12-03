@@ -34,7 +34,7 @@ Start a python server on the server’s root folder using python3
 python3 –m http.server <port_number> 
 ```
 
-If you want to start a python server on a specific IP, you can do like this,
+If you want to start a python server on a specific IP, you can do this,
 ```
 python3 -m http.server <port_number> --bind <server-IP>
 ```
@@ -80,4 +80,4 @@ Start the python server using python3
 
 You can simply download the zip files by clicking on them. 
 
-Once you download all the files and folders stop the python server with the ctrl+c keyboard shortcut and exit from the ssh connection with `exit` command 
+Once you download all the files and folders stop the python server with the ctrl+c keyboard shortcut and exit from the ssh connection with `exit` command.
