@@ -4,10 +4,10 @@
 
 Login into your server with ssh and update your Ubuntu server with sudo apt update 
 ```
-sudo apt upgrade
-```
-```
 sudo apt update
+```
+```
+sudo apt upgrade
 ```
 
 ## **Step-2: Install necessary tools** 
