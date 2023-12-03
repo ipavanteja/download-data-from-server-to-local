@@ -4,10 +4,10 @@
 
 Login into your server with ssh and update your Ubuntu server with sudo apt update 
 ```
-sudo apt upgrade
-```
-```
 sudo apt update
+```
+```
+sudo apt upgrade
 ```
 
 ## **Step-2: Install necessary tools** 
@@ -34,7 +34,7 @@ Start a python server on the server’s root folder using python3
 python3 –m http.server <port_number> 
 ```
 
-If you want to start a python server on a specific IP, you can do like this,
+If you want to start a python server on a specific IP, you can do this,
 ```
 python3 -m http.server <port_number> --bind <server-IP>
 ```
