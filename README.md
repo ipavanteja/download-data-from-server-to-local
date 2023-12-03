@@ -2,7 +2,7 @@
 
 ## **Step-1: Login and Update** 
 
-Login into your server with ssh and update your Ubuntu server with sudo apt update 
+Login into your server with ssh and update your Ubuntu server with sudo apt update and sudo apt upgrade
 ```
 sudo apt update
 ```
