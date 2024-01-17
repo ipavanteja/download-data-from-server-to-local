@@ -31,7 +31,7 @@ sudo apt install zip
 
 Start a python server on the server’s root folder using python3 
 ```
-python3 –m http.server <port_number> 
+python3 -m http.server <port_number> 
 ```
 
 If you want to start a python server on a specific IP, you can do this,
